@@ -10,15 +10,12 @@ public class AppRunner {
 	
 	public static void main(String [] args) {
 		
-		try (AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class)) {
-			FioAccount account = context.getBean(FioAccount.class);
-		}
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+		context.registerShutdownHook();
+		System.out.println("EOL");
 		
 		
 //		System.out.println(System.getenv("FIO_TOKEN"));
-		
-		
-		
 	}
 
 }
