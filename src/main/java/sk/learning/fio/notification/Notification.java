@@ -4,6 +4,6 @@ package sk.learning.fio.notification;
 
 public interface Notification {
 	
-	public void sendNotification();
+	public void sendNotification(String message, String recipient);
 
 }
